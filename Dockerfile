@@ -8,6 +8,8 @@ RUN apt-get install -y xutils-dev
 # Can't use system versions of libz, libevent, or libssl when doing a static build.
 
 
+RUN echo "number of cpus available:" $(nproc)
+
 ## Build openssl from source
 RUN export cross=arm-linux-gnueabi-
 RUN curl -fsSL "https://www.openssl.org/source/openssl-1.0.2m.tar.gz" | tar zxvf -
@@ -70,7 +72,6 @@ RUN CC="arm-linux-gnueabi-gcc" CXX="arm-linux-gnueabi-g++" CXXFLAGS="-c"  ./conf
                 --enable-static-openssl --with-openssl-dir=/openssl-1.0.2m/install \
                 --enable-static-zlib --with-zlib-dir=/zlib-1.2.11/install \
 		--disable-gcc-hardening \
-		--disable-system-torrc \
 		--disable-asciidoc \
 		--disable-systemd \
 		--disable-lzma \
@@ -78,4 +79,4 @@ RUN CC="arm-linux-gnueabi-gcc" CXX="arm-linux-gnueabi-g++" CXXFLAGS="-c"  ./conf
 
 
 RUN make -j$(nproc)
-RUN make CC="arm -linux-gnueabi-gcc" AR="arm-linux-gnueabi-ar r" RANLIB="arm-linux-gnueabi-ranlib" install
+RUN make install
