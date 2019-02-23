@@ -16,3 +16,5 @@ docker build .
 
 
 You're welcome.
+
+Shout out to the original author who did a half-assed job and never published or tested the source to their Docker Hub container, you made my evening hell.
