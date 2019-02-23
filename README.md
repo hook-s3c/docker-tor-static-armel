@@ -44,3 +44,15 @@ A couple of awesome tutorials for the uninitiated (like me);
 
 - https://insinuator.net/2018/02/creating-static-binaries-for-nmap-socat-and-other-tools/
 - https://ownyourbits.com/2018/06/13/transparently-running-binaries-from-any-architecture-in-linux-with-qemu-and-binfmt_misc/
+
+
+- https://stackoverflow.com/questions/12236159/linux-command-file-shows-for-gnu-linux-2-6-24
+- https://stackoverflow.com/questions/11841919/cross-compile-openssh-for-arm
+- https://tinsuke.wordpress.com/2011/02/17/how-to-cross-compiling-libraries-for-ios-armv6armv7i386/
+- https://medium.com/@wolfv/cross-compiling-arm-on-travis-using-clang-and-qemu-2b9702d7c6f3
+- https://www.openssl.org/source/
+- http://soft-dev-pro.blogspot.com/2014/07/cross-compile-ncurses-for-arm.html
+- https://www.cnx-software.com/2013/04/22/how-to-detect-if-an-arm-elf-binary-is-hard-float-armhf-or-soft-float-armel/
+-  https://stackoverflow.com/questions/12512101/cross-compiling-for-an-embedded-arm-based-linux-system
+- https://github.com/cretz/tor-static (x86 only)
+-  
