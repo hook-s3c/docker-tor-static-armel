@@ -7,13 +7,20 @@ This is self-contained (in a container), so to build the binary simply run;
 
 
 ```
+# get the source
 git clone https://github.com/hook-s3c/docker-tor-static-armel
-docker build .
+
+# build the image
+docker build --tag tor-static:armel .
+
+# copy the binary out of the image 
+docker run --rm --entrypoint "/bin/bash" -v $(pwd)/output:/output tor-static:armel -c "cp /tor-0.3.3.10/install/bin/tor /output/tor"
+
 ```
 
 - The binary should appear in the output folder.
 - The only dependency is having Docker installed on your system.
-- If you have multiple cores, try `docker build --cpuset-cpus=0,1,2 .` instead.
+- If you have multiple cores, try `docker build --cpuset-cpus=0,1,2 --tag tor-static:armel .` instead.
 
 You're welcome.
 

@@ -80,3 +80,7 @@ RUN CC="arm-linux-gnueabi-gcc" CXX="arm-linux-gnueabi-g++" CXXFLAGS="-c"  ./conf
 
 RUN make -j$(nproc)
 RUN make install
+VOLUME ["/output"]
+RUN cp -r install/bin/tor /output/
+
+ENTRYPOINT ['/bin/bash']
